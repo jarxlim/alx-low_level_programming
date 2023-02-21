@@ -5,9 +5,7 @@
  * Return: 1 if true. 0 if false.
  */
 
-int alpha
-
-int _islower(void)
+int _islower(int alpha)
 {
 	if (alpha >= 'a' && alpha <= 'z')
 	{
