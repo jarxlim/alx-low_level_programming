@@ -1,7 +1,8 @@
 #include "main.h"
 /**
  * _islower - checks for alphabetic character.
- * Description: checks is a character is lowercase
+ * Description: checks is a character is lowercase.
+ * @alpha - the value it receives.
  * Return: 1 if true. 0 if false.
  */
 
