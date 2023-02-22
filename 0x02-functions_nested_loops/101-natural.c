@@ -14,6 +14,8 @@ int main(void)
 		{
 			sum += i;
 		}
+		{
+		}
 		_putchar('\n');
 		return (0);
 
