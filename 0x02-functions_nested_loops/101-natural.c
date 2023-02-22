@@ -13,29 +13,8 @@ int main(void)
 		if (i % 3 == 0 || i % 5 == 0)
 		{
 			sum += i;
+		}
+		_putchar('\n');
+		return (0);
 
-			if (sum == 0)
-			{
-				_putchar('0');
-			}
-			else
-			{
-				int digits[10];
-				int num_digits = 0;
-
-				while (sum > 0)
-				{
-					digits[num_digits] = sum % 10;
-					sum /= 10;
-					num_digits++;
-				}
-				for (int i = num_digits - 1; i >= 0; i--)
-				{
-					_putchar(digits[i] + '0');
-				}
-			}
-
-			_putchar('\n');
-
-			return (0);
 }
