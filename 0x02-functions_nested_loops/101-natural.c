@@ -15,7 +15,7 @@ int main(void)
 		{
 			sum += i;
 		}
-		i++
+		i++;
 	}
 		_putchar('\n');
 		return (0);
