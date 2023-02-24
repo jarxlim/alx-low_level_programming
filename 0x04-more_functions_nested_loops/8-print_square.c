@@ -4,22 +4,21 @@
  * @size: value
  * Return: Always 0.
  */
-
 void print_square(int size)
 {
-	int i = 0, b;
+	int k = 0, h;
 
-	while (i < size && size > 0)
+	while (k < size && size > 0)
 	{
-		b = 0;
-		while (b < size)
+		h = 0;
+		while (h < size)
 		{
-			_putchar('#);
-			b++;
+			_putchar('#');
+			h++;
 		}
 		_putchar('\n');
-		i++;
+		k++;
 	}
-	if (i == 0)
+	if (k == 0)
 		_putchar('\n');
 }
