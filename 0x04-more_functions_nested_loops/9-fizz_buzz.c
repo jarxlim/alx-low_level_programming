@@ -4,30 +4,35 @@
  * main - Entry point
  * Return: Always o
  */
-
 int main(void)
 {
-	int t;
+	int i = 1;
 
-	for (t = 1; t <= 100; t++)
+	while (i <= 100)
 	{
-		if (t % 3 == 0 && t % 5 == 0)
+		if (i % 3 == 0 && i % 5 == 0)
 		{
-			printf("FizzBuzz ");
+			printf("FizzBuzz");
 		}
-		else if (t % 3 == 0)
+		else if (i % 3 == 0)
 		{
-			printf("Fizz ");
+			printf("Fizz");
 		}
-		else if (t % 5 == 0)
+		else if (i % 5 == 0)
 		{
-			printf("Buzz ");
+			printf("Buzz");
 		}
 		else
 		{
-			printf("%d ", t);
+			printf("%i", i);
 		}
+		if (i != 100)
+		{
+			putchar(' ');
+		}
+
+		i++;
 	}
-	printf("\n");
+	putchar('\n');
 	return (0);
 }
