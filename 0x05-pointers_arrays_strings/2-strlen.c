@@ -10,6 +10,5 @@ int _strlen(char *s)
 
 	while (s[len])
 	len++;
-	_putchar('\n');
 	return (len);
 }
