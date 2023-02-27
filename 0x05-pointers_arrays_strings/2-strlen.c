@@ -5,9 +5,11 @@
  * Return: string length
  */
 int _strlen(char *s)
-{       
-        len = strlen(*s);
-        _putchaar('\n);
-        return (0);
-}       
-~      
+{
+	int len = 0;
+
+	while (s[len])
+	len++;
+	_putchar('\n');
+	return (len);
+}
