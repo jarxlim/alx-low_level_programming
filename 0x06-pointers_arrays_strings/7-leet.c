@@ -6,31 +6,23 @@
  */
 char *leet(char *str)
 {
-	int i = 0;
+	int i = 0; 
+	int b;
+	int len = 5;
+	char rep_l[] =  {'A', 'E', 'O', 'T', 'L'};
+	char rep[] = {'4', '3', '0', '7', '1'};
 
 	while (str[i])
 	{
-		if (str[i] == 'a' || str[i] == 'A')
+		b = 0;
+		while (b < len)
 		{
-			str[i] = '4';
-		}
-		else if (str[i] == 'e' || str[i] == 'E')
-		{
-			str[i] = '3';
-		}
-		else if (str[i] == 'o' || str[i] == 'O')
-		{
-			str[i] = '0';
-		}
-		else if (str[i] == 't' || str[i] == 'T')
-		{
-			str[i] = '7';
-		}
-		else if (str[i] == 'l' || str[i] == 'L')
-		{
-			str[i] = '1';
+			if (str[i] == rep_l[b] || str[i] - 32 == rep_l[b])
+				str[i] = rep[b];
+			b++;
 		}
 		i++;
 	}
 	return (str);
 }
+
