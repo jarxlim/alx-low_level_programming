@@ -1,10 +1,9 @@
+#include "main.h"
 #include "stdio.h"
 /*
- * Main - Entry point
- * You are not allowed to use the variable a in your new line of code
- * You are not allowed to modify the variable p
- * You can only write one statement
- * You are not allowed to use,
+ * main - Entry point
+ *
+ * Description: not allowed to use the variable a in your new line of code
  * Return: Always 0
  */
 
