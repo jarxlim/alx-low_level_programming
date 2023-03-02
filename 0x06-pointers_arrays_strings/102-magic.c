@@ -7,8 +7,10 @@
 
 int main(void)
 {
-	int i; a[], *p;
-	
+	int i; 
+	int a[]; 
+	int *p;
+
 	a[2] = 1024;
 	p = &i;
 	*(p + 5) = 98;
