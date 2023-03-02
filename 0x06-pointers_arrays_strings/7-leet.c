@@ -6,7 +6,7 @@
  */
 char *leet(char *str)
 {
-	int i = 0; 
+	int i = 0;
 	int b;
 	int len = 5;
 	char rep_l[] =  {'A', 'E', 'O', 'T', 'L'};
