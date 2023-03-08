@@ -1,39 +1,39 @@
 #include "main.h"
 /**
- * _sqrt_recursion - a function that returns the natural sqrt of a number.
- * _sqrt_helper - functions that returns sqrt of the number when called
+ * _sqrt_helper - Functions that returns sqrt of the number when called
  * @n: The number to return the square root of.
- * @mid: The root to be tested.
  * @start: param
  * @end: param 2
  * Return: returns the natural sqrt of a number.
  */
 int _sqrt_helper(int n, int start, int end)
 {
+	int square = ((start + end) / 2) * ((start + end) / 2);
+
 	if (start > end)
 	{
 		return (-1);
 	}
-	int mi;
-	int square;
-
-	mi = (start + end) / 2;
-	square = mi * mi;
-
-	if (square == n)
+	else if (square == n)
 	{
-		return (mi);
+		return ((start + end) / 2);
 	}
 	else if (square < n)
 	{
-		return (_sqrt_helper(n, mi + 1, end));
+		return (_sqrt_helper(n, ((start + end) / 2) + 1, end));
 	}
 	else
 	{
-		return (_sqrt_helper(n, start, mi - 1));
+		return (_sqrt_helper(n, start, ((start + end) / 2) - 1));
 	}
 }
 
+/**
+ * _sqrt_recursion - a function that returns the sqrt of a number.
+ * @n: the number to return its square root
+ *
+ * Return: -1 if n<0, 0 if n==0, else return the natural sqrt of n
+ */
 int _sqrt_recursion(int n)
 {
 	if (n < 0)
