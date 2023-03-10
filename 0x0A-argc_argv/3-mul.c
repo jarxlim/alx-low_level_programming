@@ -9,15 +9,22 @@
  */
 int main(int argc, char *argv[])
 {
-	int num1 = atoi(argv[1]);
-	int num2 = atoi(argv[2]);
-	int result = num1 * num2;
+	int i, j;
 
 	if (argc == 1 || argc == 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
-	printf("%d\n", result);
+	else
+	{
+		j = 1;
+
+		for (i = 1; i < 3; i++)
+		j = j * atoi(argv[i]);
+
+		printf("%d\n", j);
+	}
+
 	return (0);
 }
