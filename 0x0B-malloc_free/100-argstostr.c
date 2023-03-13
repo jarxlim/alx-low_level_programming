@@ -38,4 +38,5 @@ char *argstostr(int ac, char **av)
 		result[pos++] = '\n';
 	}
 	result[pos] = '\0';
+	return result;
 }
