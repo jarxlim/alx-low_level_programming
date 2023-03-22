@@ -3,7 +3,7 @@
  * array_iterator - a function that executes a function given as a parameter
  * @array: a pointer to an array of integers
  * @size: the size of the array
- * @action: a pointer to a function that takes an integer parameter 
+ * @action: a pointer to a function that takes an integer parameter
  * Return: (void)
  */
 
