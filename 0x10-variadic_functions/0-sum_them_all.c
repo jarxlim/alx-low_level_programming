@@ -3,6 +3,7 @@
 /**
  * sum_them_all - a function that returns the sum of all its parameters.
  * @n: unsigned integer
+ * @...: variable number of arguements
  * Return: 0 if n == 0, otherwise return sum
  */
 int sum_them_all(const unsigned int n, ...)
