@@ -1,25 +1,23 @@
-section .data
-    hello db 'Hello, Holberton!', 0
-    fmt db '%s\n', 0
+; File: 101-hello_holberton.asm
+
+extern printf
 
 section .text
-    global main
-    extern printf
+   global main
 
 main:
-    push rbp
-    mov rbp, rsp
+   push rbp
 
-    ; prepare arguments for printf
-    mov rdi, fmt
-    mov rsi, hello
-    xor rax, rax
+   mov rdi,fmt
+   mov rsi,msg
+   mov rax,0
+   call printf
 
-    ; call printf
-    call printf
+   pop rbp
 
-    ; restore stack and return
-    mov rsp, rbp
-    pop rbp
-    xor eax, eax
-    ret
+   mov rax,0
+   ret
+
+section .data
+   msg: db "Hello, Holberton", 0
+   fmt: db "%s", 10, 0
