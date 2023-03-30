@@ -7,6 +7,14 @@
  * @str: a string parameter
  * Return: NULL, if funtion fails or else returns a pointer to the new node
  */
+
+typedef struct list_s
+{
+	char *str;
+	struct list_s *next;
+}
+list_t;
+
 list_t *add_node(list_t **head, const char *str)
 {
 	list_t *new_node = malloc(sizeof(list_t));
