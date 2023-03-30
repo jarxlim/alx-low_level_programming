@@ -1,4 +1,8 @@
 #include <stdio.h>
+/**
+ * print_message - prints before the main function is executed
+ *
+ */
 
 void print_message(void)
 {
