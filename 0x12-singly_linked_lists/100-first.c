@@ -1,4 +1,5 @@
 #include <stdio.h>
+void __attribute__((constructor)) print_message(void);
 /**
  * print_message - prints before the main function is executed
  *
