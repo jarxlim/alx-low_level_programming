@@ -4,6 +4,7 @@
  * @head: pointer to pointer of the head node of the listint_t list.
  * @idx: is the index of the list where the new node should be added
  * @n: integer value for the new node to contain
+ * Return: the address of the new node, or NULL if it failed
  */
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
@@ -33,5 +34,5 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	new_node->next = ref_node->next;
 	ref_node->next = new_node;
 
-	return(new_node);
+	return (new_node);
 }
