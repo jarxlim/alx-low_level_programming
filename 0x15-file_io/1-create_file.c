@@ -31,18 +31,15 @@ int create_file(const char *filename, char *text_content)
 	{
 		for (len = 0; text_content[len] != '\0';)
 			len++;
-	}
-	else
-	{
+		
 		wr = write(opn, text_content, len);
-	}
 
-	if (wr == -1 || wr != len)
-	{
-		close(opn);
-		return (-1);
+		if (wr == -1 || wr != len)
+		{
+			close(opn);
+			return (-1);
+		}
 	}
-
 	close(opn);
 
 	return (1);
