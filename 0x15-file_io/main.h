@@ -1,6 +1,11 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+/**
+ * Description: prototypes for all functions in a header file
+ *
+ */
+
 #include <stddef.h>
 #include <fcntl.h>
 #include <unistd.h>
