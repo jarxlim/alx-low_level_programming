@@ -34,7 +34,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	else
 	{
 		opn = open(filename, O_RDONLY);
-		rd = read(opn buffer, letters);
+		rd = read(opn, buffer, letters);
 		wr = write(STDOUT_FILENO, buffer, rd);
 	}
 
