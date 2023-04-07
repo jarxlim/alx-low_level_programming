@@ -1,9 +1,9 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-/**
- * Description: prototypes for all functions in a header file
- *
+/*
+ * Description: header file which contains prototypes of the functions
+ *              in the directory.
  */
 
 #include <stddef.h>
@@ -17,4 +17,4 @@ ssize_t read_textfile(const char *filename, size_t letters);
 int create_file(const char *filename, char *text_content);
 int append_text_to_file(const char *filename, char *text_content);
 
-#endif
+#endif /* MAIN_H */
