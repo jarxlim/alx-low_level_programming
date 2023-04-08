@@ -5,25 +5,9 @@
  */
 void print_binary(unsigned long int n)
 {
-	int i, j, mark = 0;
-
-	if (n == 0)
+	if (n > 1)
 	{
-		_putchar('0');
-		return;
+		print_binary(n >> 1);
 	}
-
-	for (i = 20; i >= 0; i--)
-	{
-		j = n >> i;
-		if (j & 1)
-		{
-			mark = 1;
-			_putchar('1');
-		}
-		else if (mark == 1)
-		{
-			_putchar('0');
-		}
-	}
+	_putchar((n & 1) + '0');
 }
