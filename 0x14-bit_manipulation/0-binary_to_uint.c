@@ -10,7 +10,7 @@
 unsigned int binary_to_uint(const char *b)
 {
 	unsigned int numba = 0;
-	int i = 0;
+	size_t i = 0;
 
 	if (b[i] == '\0')
 	{
