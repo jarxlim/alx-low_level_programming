@@ -71,8 +71,7 @@ int main(int argc, char *argv[])
 		file_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	}
 
-	do
-	{
+	do {
 		if (file_from == -1 || rd == -1)
 		{
 			dprintf(STDERR_FILENO,
@@ -94,11 +93,11 @@ int main(int argc, char *argv[])
 		file_to = open(argv[2], O_WRONLY | O_APPEND);
 
 	}
-	while (rd > 0);
-
+	while (rd > 0)
+	{
 	free(buffer);
 	can_close(file_from);
 	can_close(file_to);
-
+	}
 	return (0);
 }
