@@ -1,7 +1,6 @@
 #include "main.h"
 /**
  * _sqrt_helper - Functions that returns sqrt of the number when called
- * @n: The number to return the square root of.
  * @number: param
  * @root: param 2
  * Return: returns the natural sqrt of a number.
