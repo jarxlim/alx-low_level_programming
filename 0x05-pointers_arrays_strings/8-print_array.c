@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * print_array - prints n elements of an array of integers,
  * @a: int type array pointer
@@ -7,12 +8,12 @@
  */
 void print_array(int *a, int n)
 {
-	int i;
+	int index;
 
-	i = 0;
-	for (n--; n >= 0; n--, i++)
+	index = 0;
+	for (n--; n >= 0; n--, index++)
 	{
-		printf("%d", a[i]);
+		printf("%d", a[index]);
 		if (n > 0)
 		{
 			printf(", ");
