@@ -30,13 +30,11 @@ int _sqrt_helper(int number, int root)
  */
 int _sqrt_recursion(int n)
 {
+	int root = 0;
+
 	if (n < 0)
 	{
 		return (-1);
-	}
-	else if (n == 0)
-	{
-		return (0);
 	}
 	else if (n == 1)
 	{
@@ -44,6 +42,6 @@ int _sqrt_recursion(int n)
 	}
 	else
 	{
-		return (_sqrt_helper(n, 1, n));
+		return (_sqrt_helper(n, root));
 	}
 }
