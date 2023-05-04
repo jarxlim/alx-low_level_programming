@@ -1,4 +1,4 @@
-#include "main.h"
+#include "lists.h"
 
 /**
  * looped_listint_count - Counts the number of unique node
@@ -47,11 +47,9 @@ size_t listint_count(listint_t *head)
 }
 
 /**
- * listint_safe - Frees a listint_t list safely
+ * free_listint_safe - Frees a listint_t list safely
  * @h: A pointer 
  * Return: The size of the list that was freed.
- *
- * Description: The function sets the head to NULL.
  */
 size_t free_listint_safe(listint_t **h)
 {
