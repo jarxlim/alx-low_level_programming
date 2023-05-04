@@ -2,29 +2,23 @@
 /**
  * _sqrt_helper - Functions that returns sqrt of the number when called
  * @n: The number to return the square root of.
- * @start: param
- * @end: param 2
+ * @number: param
+ * @root: param 2
  * Return: returns the natural sqrt of a number.
  */
-int _sqrt_helper(int n, int start, int end)
+int _sqrt_helper(int number, int root)
 {
-	int square = ((start + end) / 2) * ((start + end) / 2);
-
-	if (start > end)
+	if ((root * root) == number)
+	{
+		return (root);
+	}
+	if (root == number / 2)
 	{
 		return (-1);
 	}
-	else if (square == n)
-	{
-		return ((start + end) / 2);
-	}
-	else if (square < n)
-	{
-		return (_sqrt_helper(n, ((start + end) / 2) + 1, end));
-	}
 	else
 	{
-		return (_sqrt_helper(n, start, ((start + end) / 2) - 1));
+		return (_sqrt_helper(number, root + 1));
 	}
 }
 
