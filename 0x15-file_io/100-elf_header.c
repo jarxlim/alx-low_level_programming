@@ -1,11 +1,12 @@
 #include "main.h"
+#include <elf.h>
 /*
  * main - entry point
  * argc: integer representing the number of arguments passed to the program.
  * @argv: array of strings representing the command line arguments.
  * Return: integer value of 0 if the program runs successfully.
  */
-int main(int argc, int argv[])
+int main(int argc, char *argv[])
 {
 	Elf64_Ehdr *header;
 	register int file_desc, read_count, char_count;
@@ -74,6 +75,29 @@ void num_print(unsigned char *e_ident)
 	for (index = 0; index < EI_NIDENT - 1; index++)
 		printf("%02x ", e_ident[index]);
 	printf("%02x\n", e_ident[index]);
+}
+
+/**
+ * elf_class - ELF's class
+ * @e_ident: char array
+ */
+void elf_class(unsigned char *e_ident)
+{
+	printf("  Class:                             ");
+	switch (e_ident[EI_CLASS])
+	{
+		case ELFCLASSNONE:
+			printf("This class is invalid\n");
+			break;
+		case ELFCLASS32:
+			printf("ELF32\n");
+			break;
+		case ELFCLASS64:
+			printf("ELF64\n");
+			break;
+		default:
+			printf("<unknown: %x>\n", e_ident[EI_CLASS]);
+	}
 }
 
 /**
@@ -210,8 +234,8 @@ void entry_print(unsigned int e_entry, unsigned char *e_ident)
  */
 unsigned int big_endian(unsigned int n)
 {
-	return (((x >> 24) & 0x000000ff) |
-		((x >> 8) & 0x0000ff00)  |
-		((x << 8) & 0x00ff0000)  |
-		((x << 24) & 0xff000000));
+	return (((n >> 24) & 0x000000ff) |
+		((n >> 8) & 0x0000ff00)  |
+		((n << 8) & 0x00ff0000)  |
+		((n << 24) & 0xff000000));
 }

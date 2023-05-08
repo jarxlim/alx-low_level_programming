@@ -10,6 +10,8 @@
 #include <unistd.h>
 #include <sys/types.h>
 #include <sys/stat.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 int _putchar(char c);
 ssize_t read_textfile(const char *filename, size_t letters);
@@ -23,5 +25,5 @@ void print_osabi(unsigned char *e_ident);
 void type_print(unsigned int e_type, unsigned char *e_ident);
 void entry_print(unsigned int e_entry, unsigned char *e_ident);
 unsigned int big_endian(unsigned int n);
-
+void elf_class(unsigned char *e_ident);
 #endif
