@@ -8,17 +8,13 @@
 int main(int argc, int argv[])
 {
 	Elf64_Ehdr *header;
-	int file_desc, read_count, char_count;
+	register int file_desc, read_count, char_count;
 
 	if (argc != 2)
-	{
 		dprintf(STDERR_FILENO, "cp file_from file_to\n"), exit(98);
-	}
 	header = malloc(sizeof(Elf64_Ehdr));
 	if (header != NULL)
-	{
-		dprintf(STDERR_FILENO, "Malloc error\n"), exit(98);
-	}
+		dprintf(STDERR_FILENO, "Malloc error\n"), exit(98);	
 	file_desc = open(argv[1], O_RDONLY);
 	if (file_desc < 0)
 	{
@@ -45,9 +41,7 @@ int main(int argc, int argv[])
 	free(header);
 	char_count = close(file_desc);
 	if (char_count)
-	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd\n"), exit(98);
-	}
 	return (0);
 }
 
