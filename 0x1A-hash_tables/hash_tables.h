@@ -79,11 +79,12 @@ typedef struct shash_table_s
 	shash_node_t *stail;
 } shash_table_t;
 
-shash_table_t *shash_table_create(unsigned long int size);
-int shash_table_set(shash_table_t *ht, const char *key, const char *value);
-char *shash_table_get(const shash_table_t *ht, const char *key);
-void shash_table_print(const shash_table_t *ht);
-void shash_table_print_rev(const shash_table_t *ht);
-void shash_table_delete(shash_table_t *ht);
+shash_table_t *create_hash_sort(unsigned long int size);
+shash_node_t *create_hash_node(const char *key, const char *value);
+void add_sorted(shash_table_t *table, shash_node_t *node);
+int table_set(shash_table_t *ht, const char *key, const char *value);
+char *table_get(const shash_table_t *ht, const char *key);
+void table_print(const shash_table_t *ht);
+void table_print_rev(const shash_table_t *ht);
 
 #endif /* _HASH_TABLES_H_ */
